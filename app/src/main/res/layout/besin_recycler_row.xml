@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="besin"
+            type="com.example.besinlerkitabi.model.Besin" />
+    </data>
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/ic_launcher_background">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/besin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{besin.besinIsim}"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textSize="20sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/kalorisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{besin.besinKalori}"
+                android:layout_margin="5dp"
+                android:textSize="18sp"
+                >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
